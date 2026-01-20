@@ -1,5 +1,254 @@
 [
   {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminDiscountsController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/discounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminDiscountsController",
+    "Method": "Create",
+    "RelativePath": "api/admin/discounts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "TeaHouse.api.Models.Discount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminDiscountsController",
+    "Method": "Update",
+    "RelativePath": "api/admin/discounts/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.api.Models.Discount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminDiscountsController",
+    "Method": "Toggle",
+    "RelativePath": "api/admin/discounts/{id}/toggle",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.Admin.AdminFeaturedNewsController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/featured-news",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.Admin.AdminFeaturedNewsController",
+    "Method": "Create",
+    "RelativePath": "api/admin/featured-news",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "short_description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "recipe_content",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "thumbnail",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "drink_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "is_active",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.Admin.AdminFeaturedNewsController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/featured-news/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.Admin.AdminFeaturedNewsController",
+    "Method": "Update",
+    "RelativePath": "api/admin/featured-news/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "short_description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "recipe_content",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "thumbnail",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "drink_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "is_active",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.Admin.AdminFeaturedNewsController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/featured-news/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminInventoriesController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/inventories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminInventoriesController",
+    "Method": "Update",
+    "RelativePath": "api/admin/inventories/{productId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "quantity",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminInventoriesController",
+    "Method": "Toggle",
+    "RelativePath": "api/admin/inventories/{productId}/toggle",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TeaHouse.Api.Controllers.AdminOrdersController",
     "Method": "GetAll",
     "RelativePath": "api/admin/orders",
@@ -58,9 +307,131 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "TeaHouse.Api.Controllers.AdminStatisticsController",
-    "Method": "Overview",
-    "RelativePath": "api/admin/statistics",
+    "ContainingType": "TeaHouse.Api.Controllers.AdminOrdersController",
+    "Method": "GetTimeline",
+    "RelativePath": "api/admin/orders/{id}/timeline",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductImagesController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/product-images/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductImagesController",
+    "Method": "SetMain",
+    "RelativePath": "api/admin/product-images/{id}/main",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductImagesController",
+    "Method": "Toggle",
+    "RelativePath": "api/admin/product-images/{id}/toggle",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductImagesController",
+    "Method": "Add",
+    "RelativePath": "api/admin/product-images/{productId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.Api.Controllers.Admin.ProductImageCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductToppingsController",
+    "Method": "GetByProduct",
+    "RelativePath": "api/admin/product-toppings/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductToppingsController",
+    "Method": "Update",
+    "RelativePath": "api/admin/product-toppings/{productId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "toppingIds",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductsController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/products",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -68,35 +439,82 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "TeaHouse.Api.Controllers.AdminStatisticsController",
-    "Method": "RevenueByDay",
-    "RelativePath": "api/admin/statistics/revenue-by-day",
-    "HttpMethod": "GET",
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductsController",
+    "Method": "Create",
+    "RelativePath": "api/admin/products",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "days",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "dto",
+        "Type": "TeaHouse.Api.DTOs.ProductCreateDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "TeaHouse.Api.Controllers.AdminStatisticsController",
-    "Method": "TopProducts",
-    "RelativePath": "api/admin/statistics/top-products",
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductsController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/products/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "top",
+        "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductsController",
+    "Method": "Update",
+    "RelativePath": "api/admin/products/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.Api.DTOs.ProductUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminProductsController",
+    "Method": "Toggle",
+    "RelativePath": "api/admin/products/{id}/toggle",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.AdminStatisticsController",
+    "Method": "GetDashboardStatistics",
+    "RelativePath": "api/admin/statistics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -142,6 +560,132 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminToppingsController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/toppings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminToppingsController",
+    "Method": "Create",
+    "RelativePath": "api/admin/toppings",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.api.Models.Topping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminToppingsController",
+    "Method": "Update",
+    "RelativePath": "api/admin/toppings/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.api.Models.Topping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminToppingsController",
+    "Method": "Toggle",
+    "RelativePath": "api/admin/toppings/{id}/toggle",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.Admin.AdminUsersController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.Admin.AdminUsersController",
+    "Method": "Create",
+    "RelativePath": "api/admin/users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.api.DTOs.Users.UserCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.Admin.AdminUsersController",
+    "Method": "Update",
+    "RelativePath": "api/admin/users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.api.DTOs.Users.UserUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.api.Controllers.Admin.AdminUsersController",
+    "Method": "Toggle",
+    "RelativePath": "api/admin/users/{id}/toggle",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TeaHouse.Api.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/auth/login",
@@ -155,6 +699,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -194,6 +748,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TeaHouse.Api.Controllers.DiscountsController",
+    "Method": "ApplyDiscount",
+    "RelativePath": "api/discounts/apply",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.Api.DTOs.Discounts.ApplyDiscountDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.FeaturedNewsController",
+    "Method": "GetPublic",
+    "RelativePath": "api/featured-news",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.FeaturedNewsController",
+    "Method": "GetBySlug",
+    "RelativePath": "api/featured-news/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TeaHouse.Api.Controllers.OrdersController",
     "Method": "CreateOrder",
     "RelativePath": "api/orders",
@@ -204,6 +800,70 @@
       {
         "Name": "dto",
         "Type": "TeaHouse.Api.DTOs.CreateOrderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.OrdersController",
+    "Method": "CancelOrder",
+    "RelativePath": "api/orders/{id}/cancel",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.OrderStatusHistoryController",
+    "Method": "GetHistory",
+    "RelativePath": "api/orders/{orderId}/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.OrdersController",
+    "Method": "GetOrderTimeline",
+    "RelativePath": "api/orders/{orderId}/timeline",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.OrdersController",
+    "Method": "CheckDiscount",
+    "RelativePath": "api/orders/check-discount/{code}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -276,6 +936,69 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.ProductImagesController",
+    "Method": "Upload",
+    "RelativePath": "api/products/{productId}/images",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.ProductImagesController",
+    "Method": "Delete",
+    "RelativePath": "api/products/{productId}/images/{imageId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "imageId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.ProductImagesController",
+    "Method": "SetMain",
+    "RelativePath": "api/products/{productId}/images/{imageId}/set-main",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "imageId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -366,6 +1089,32 @@
       {
         "Name": "model",
         "Type": "TeaHouse.api.Models.Topping",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.UsersController",
+    "Method": "GetProfile",
+    "RelativePath": "api/user/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.UsersController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/user/profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.Api.DTOs.UserProfileDto",
         "IsRequired": true
       }
     ],

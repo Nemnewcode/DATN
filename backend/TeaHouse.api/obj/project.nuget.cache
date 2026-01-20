@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zjBt37f3DU0=",
+  "dgSpecHash": "AOA7s3BTCCU=",
   "success": true,
   "projectFilePath": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\TeaHouse.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hoain\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\hoain\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\hoain\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\hoain\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\hoain\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",
     "C:\\Users\\hoain\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

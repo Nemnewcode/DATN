@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
-using TeaHouse.api.Models;
 using TeaHouse.Api.Data;
 using TeaHouse.api.Models;
 
@@ -20,7 +19,9 @@ namespace TeaHouse.Api.Controllers
             _context = context;
         }
 
+        // ===============================
         // GET: api/admin/orders
+        // ===============================
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -29,54 +30,133 @@ namespace TeaHouse.Api.Controllers
                 .Include(o => o.OrderItems)
                     .ThenInclude(oi => oi.product)
                 .OrderByDescending(o => o.created_at)
+                .Select(o => new
+                {
+                    o.id,
+                    o.total,
+                    o.status,
+                    o.created_at,
+                    user = new
+                    {
+                        o.user.id,
+                        o.user.name,
+                        o.user.email
+                    },
+                    items = o.OrderItems.Select(oi => new
+                    {
+                        product_name = oi.product.name,
+                        oi.quantity,
+                        oi.price,
+                        toppings = oi.OrderToppings.Select(t => new {
+                            t.topping.name,
+                            t.topping.price
+                        })
+                    })
+                })
                 .ToListAsync();
 
             return Ok(orders);
         }
 
-        // PUT: api/admin/orders/{id}/confirm
+        // ===============================
+        // GET TIMELINE
+        // ===============================
+        [HttpGet("{id}/timeline")]
+        public async Task<IActionResult> GetTimeline(int id)
+        {
+            var timeline = await _context.OrderStatusHistories
+                .Where(h => h.order_id == id)
+                .OrderBy(h => h.updated_at)
+                .Select(h => new
+                {
+                    h.status,
+                    h.updated_at,
+                    updated_by = h.updated_byNavigation.name
+                })
+                .ToListAsync();
+
+            return Ok(timeline);
+        }
+
+        // ===============================
+        // CONFIRM ORDER
+        // ===============================
         [HttpPut("{id}/confirm")]
         public async Task<IActionResult> Confirm(int id)
         {
-            return await UpdateStatus(id, "Confirmed");
+            return await UpdateStatus(id, OrderStatus.Confirmed);
         }
 
-        // PUT: api/admin/orders/{id}/cancel
+        // ===============================
+        // CANCEL ORDER
+        // ===============================
         [HttpPut("{id}/cancel")]
         public async Task<IActionResult> Cancel(int id)
         {
-            return await UpdateStatus(id, "Cancelled");
+            return await UpdateStatus(id, OrderStatus.Cancelled);
         }
 
-        // PUT: api/admin/orders/{id}/complete
+        // ===============================
+        // COMPLETE ORDER
+        // ===============================
         [HttpPut("{id}/complete")]
         public async Task<IActionResult> Complete(int id)
         {
-            return await UpdateStatus(id, "Completed");
+            return await UpdateStatus(id, OrderStatus.Completed);
         }
 
-        private async Task<IActionResult> UpdateStatus(int orderId, string status)
+        // ===============================
+        // CORE: UPDATE STATUS + HISTORY
+        // ===============================
+        private async Task<IActionResult> UpdateStatus(int orderId, string newStatus)
         {
-            var order = await _context.Orders.FindAsync(orderId);
+            var order = await _context.Orders
+                .FirstOrDefaultAsync(o => o.id == orderId);
+
             if (order == null)
-                return NotFound();
+                return NotFound("Không tìm thấy đơn hàng");
 
-            order.status = status;
+            if (order.status == OrderStatus.Completed ||
+                order.status == OrderStatus.Cancelled)
+            {
+                return BadRequest("Không thể thay đổi trạng thái đơn hàng này");
+            }
 
-            // lưu lịch sử trạng thái
-            var adminId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            order.status = newStatus;
+
+            var adminIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(adminIdClaim))
+                return Unauthorized();
+
+            int adminId = int.Parse(adminIdClaim);
 
             _context.OrderStatusHistories.Add(new OrderStatusHistory
             {
                 order_id = order.id,
-                status = status,
+                status = newStatus,
                 updated_by = adminId,
                 updated_at = DateTime.Now
             });
 
             await _context.SaveChangesAsync();
 
-            return Ok($"Đơn hàng đã chuyển sang trạng thái: {status}");
+            return Ok(new
+            {
+                message = "Cập nhật trạng thái đơn hàng thành công",
+                order_id = order.id,
+                status = newStatus
+            });
         }
+    }
+
+    // ===============================
+    // ORDER STATUS CONSTANT
+    // ===============================
+    public static class OrderStatus
+    {
+        public const string Pending = "Pending";
+        public const string Confirmed = "Confirmed";
+        public const string Cancelled = "Cancelled";
+        public const string Completed = "Completed";
     }
 }

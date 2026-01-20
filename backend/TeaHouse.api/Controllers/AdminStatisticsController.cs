@@ -1,97 +1,92 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using TeaHouse.api.Models;
 using TeaHouse.Api.Data;
 
-namespace TeaHouse.Api.Controllers
+namespace TeaHouse.api.Controllers
 {
     [ApiController]
     [Route("api/admin/statistics")]
-    [Authorize(Roles = "Admin")]
     public class AdminStatisticsController : ControllerBase
     {
-        private readonly TeaHouseDbContext _context;
+        private readonly TeaHouseDbContext _context; 
 
         public AdminStatisticsController(TeaHouseDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/admin/statistics
         [HttpGet]
-        public async Task<IActionResult> Overview()
+        public async Task<IActionResult> GetDashboardStatistics()
         {
-            var today = DateTime.Today;
-            var monthStart = new DateTime(today.Year, today.Month, 1);
-
-            var completedOrders = _context.Orders
-                .Where(o => o.status == "Completed");
-
-            var totalRevenue = await completedOrders
-                .SumAsync(o => (decimal?)o.total) ?? 0;
-
-            var todayRevenue = await completedOrders
-                .Where(o => o.created_at >= today)
-                .SumAsync(o => (decimal?)o.total) ?? 0;
-
-            var monthRevenue = await completedOrders
-                .Where(o => o.created_at >= monthStart)
-                .SumAsync(o => (decimal?)o.total) ?? 0;
-
-            var totalOrders = await completedOrders.CountAsync();
-
-            return Ok(new
+            try
             {
-                totalRevenue,
-                todayRevenue,
-                monthRevenue,
-                totalOrders
-            });
+                var totalRevenue = await _context.Orders
+                    .Where(o => o.status == "Completed")
+                    .Select(o => (decimal?)o.total)
+                    .SumAsync() ?? 0;
+
+                var totalOrders = await _context.Orders.CountAsync();
+
+                var pendingReservations = await _context.Orders
+                    .CountAsync(o => o.status == "Pending");
+
+                // ✅ FIX CHỖ NÀY
+                var revenueByDayRaw = await _context.Orders
+                    .Where(o =>
+                        o.status == "Completed" &&
+                        o.created_at != null
+                    )
+                    .GroupBy(o => o.created_at.Value.Date)
+                    .Select(g => new
+                    {
+                        Date = g.Key,
+                        Revenue = g.Sum(x => x.total)
+                    })
+                    .OrderBy(x => x.Date)
+                    .Take(7)
+                    .ToListAsync();
+
+                var revenueByDay = revenueByDayRaw
+                    .Select(x => new
+                    {
+                        date = x.Date.ToString("dd/MM"),
+                        revenue = x.Revenue
+                    });
+
+                var orderStatus = await _context.Orders
+                    .Where(o => o.status != null)
+                    .GroupBy(o => o.status)
+                    .Select(g => new
+                    {
+                        status = g.Key,
+                        count = g.Count()
+                    })
+                    .ToListAsync();
+
+                var totalProductsSold = await _context.OrderItems
+                    .Select(oi => (int?)oi.quantity)
+                    .SumAsync() ?? 0;
+
+                return Ok(new
+                {
+                    totalRevenue,
+                    totalOrders,
+                    pendingReservations,
+                    totalProducts = totalProductsSold,
+                    revenueByDay,
+                    orderStatus
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = "Dashboard statistics error",
+                    error = ex.Message
+                });
+            }
         }
 
-        // GET: api/admin/statistics/revenue-by-day?days=7
-        [HttpGet("revenue-by-day")]
-        public async Task<IActionResult> RevenueByDay(int days = 7)
-        {
-            var fromDate = DateTime.Today.AddDays(-days + 1);
-
-            var data = await _context.Orders
-                .Where(o => o.status == "Completed"
-                         && o.created_at >= fromDate)
-                .GroupBy(o => o.created_at!.Value.Date).Select(g => new
-                {
-                    date = g.Key,
-                    revenue = g.Sum(x => x.total)
-                })
-                .OrderBy(x => x.date)
-                .ToListAsync();
-
-            return Ok(data);
-        }
-
-        // GET: api/admin/statistics/top-products?top=5
-        [HttpGet("top-products")]
-        public async Task<IActionResult> TopProducts(int top = 5)
-        {
-            var data = await _context.OrderItems
-                .Where(oi => oi.order.status == "Completed")
-                .GroupBy(oi => new
-                {
-                    oi.product_id,
-                    oi.product.name
-                })
-                .Select(g => new
-                {
-                    productId = g.Key.product_id,
-                    productName = g.Key.name,
-                    quantity = g.Sum(x => x.quantity),
-                    revenue = g.Sum(x => x.quantity * x.price)
-                })
-                .OrderByDescending(x => x.quantity)
-                .Take(top)
-                .ToListAsync();
-
-            return Ok(data);
-        }
     }
 }

@@ -3,11 +3,11 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using TeaHouse.Api.Data;
-using TeaHouse.Api.DTOs;
-using TeaHouse.api.Models;
 using Microsoft.EntityFrameworkCore;
 using TeaHouse.api.Models;
+using TeaHouse.Api.DTOs;
+using TeaHouse.Api.Data;
+using BCrypt;
 
 namespace TeaHouse.Api.Controllers
 {
@@ -24,11 +24,15 @@ namespace TeaHouse.Api.Controllers
             _config = config;
         }
 
+        // ===============================
         // POST: api/auth/register
+        // ===============================
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto dto)
         {
-            var exists = await _context.Users.AnyAsync(u => u.email == dto.email);
+            var exists = await _context.Users
+                .AnyAsync(u => u.email == dto.email);
+
             if (exists)
                 return BadRequest("Email đã tồn tại");
 
@@ -36,9 +40,10 @@ namespace TeaHouse.Api.Controllers
             {
                 name = dto.name,
                 email = dto.email,
-                password = dto.password, // đồ án: OK (thực tế phải hash)
+                password = BCrypt.Net.BCrypt.HashPassword(dto.password), // ✅ HASH
                 role = "User",
-                is_active = true
+                is_active = true,
+                created_at = DateTime.Now
             };
 
             _context.Users.Add(user);
@@ -47,16 +52,27 @@ namespace TeaHouse.Api.Controllers
             return Ok("Đăng ký thành công");
         }
 
+        // ===============================
         // POST: api/auth/login
+        // ===============================
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto dto)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u =>
-                u.email == dto.email && u.password == dto.password && u.is_active == true);
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.email == dto.email);
 
             if (user == null)
                 return Unauthorized("Sai email hoặc mật khẩu");
 
+            // ❌ USER BỊ KHOÁ
+            if (user.is_active == false)
+                return Unauthorized("Tài khoản đã bị khoá");
+
+            // ❌ SAI MẬT KHẨU
+            if (!BCrypt.Net.BCrypt.Verify(dto.password, user.password))
+                return Unauthorized("Sai email hoặc mật khẩu");
+
+            // ================= JWT =================
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, user.id.ToString()),
@@ -65,22 +81,39 @@ namespace TeaHouse.Api.Controllers
             };
 
             var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+                Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
 
             var token = new JwtSecurityToken(
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(
-                    int.Parse(_config["Jwt:ExpireMinutes"])),
-                signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
+                    int.Parse(_config["Jwt:ExpireMinutes"]!)),
+                signingCredentials: new SigningCredentials(
+                    key, SecurityAlgorithms.HmacSha256)
             );
 
             return Ok(new
             {
                 token = new JwtSecurityTokenHandler().WriteToken(token),
-                role = user.role
+                user = new
+                {
+                    id = user.id,
+                    name = user.name,
+                    email = user.email,
+                    role = user.role
+                }
             });
+        }
+
+        // ===============================
+        // POST: api/auth/logout
+        // ===============================
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            // JWT stateless → logout xử lý frontend
+            return Ok(new { message = "Đăng xuất thành công" });
         }
     }
 }

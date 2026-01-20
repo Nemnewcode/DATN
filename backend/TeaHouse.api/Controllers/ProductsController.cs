@@ -23,34 +23,29 @@ namespace TeaHouse.Api.Controllers
                 .Where(p => p.is_active == true)
                 .Select(p => new
                 {
-                    id = p.id,
-                    name = p.name,
-                    price = p.price,
-
+                    p.id,
+                    p.name,
+                    p.price,
                     image = p.ProductImages
-                        .Where(i => i.is_main == true && i.is_active == true)
+                        .Where(i => i.is_main  == true)
                         .Select(i => i.image_url)
                         .FirstOrDefault(),
 
-                    status = p.status,
-
-                    category = new
-                    {
-                        id = p.category.id,
-                        name = p.category.name
-                    },
-
-                    toppings = p.ProductToppings.Select(pt => new
-                    {
-                        id = pt.topping.id,
-                        name = pt.topping.name,
-                        price = pt.topping.price
-                    })
+                    toppings = p.ProductToppings
+                        .Where(pt => pt.topping.is_active == true)
+                        .Select(pt => new
+                        {
+                            pt.topping.id,
+                            pt.topping.name,
+                            pt.topping.price
+                        })
+                        .ToList()
                 })
                 .ToListAsync();
 
             return Ok(products);
         }
+
 
 
         // GET: api/products/5
@@ -107,24 +102,38 @@ namespace TeaHouse.Api.Controllers
         public async Task<IActionResult> GetByCategory(string slug)
         {
             var products = await _context.Products
-                .Where(p => p.is_active == true && p.category.slug == slug)
+                .Include(p => p.ProductImages)
+                .Include(p => p.ProductToppings)
+                    .ThenInclude(pt => pt.topping)
+                .Where(p =>
+                    p.category.slug == slug &&
+                    p.is_active == true
+                )
                 .Select(p => new
                 {
                     p.id,
                     p.name,
                     p.price,
-
                     image = p.ProductImages
-                        .Where(i => i.is_main == true && i.is_active == true)
+                        .Where(i => i.is_main == true)
                         .Select(i => i.image_url)
                         .FirstOrDefault(),
 
-                    category = p.category.name
+                    toppings = p.ProductToppings
+                        .Where(pt => pt.topping.is_active == true)
+                        .Select(pt => new
+                        {
+                            pt.topping.id,
+                            pt.topping.name,
+                            pt.topping.price
+                        })
+                        .ToList()
                 })
                 .ToListAsync();
 
             return Ok(products);
         }
+
 
     }
 }

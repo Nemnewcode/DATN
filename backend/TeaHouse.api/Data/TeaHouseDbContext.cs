@@ -80,6 +80,7 @@ namespace TeaHouse.Api.Data
 
             modelBuilder.Entity<Inventory>(entity =>
             {
+                entity.ToTable("Inventory");
                 entity.HasKey(e => e.id);
                 entity.Property(e => e.last_update).HasDefaultValueSql("getdate()");
                 entity.Property(e => e.is_active).HasDefaultValue(true);
@@ -121,6 +122,7 @@ namespace TeaHouse.Api.Data
 
             modelBuilder.Entity<OrderStatusHistory>(entity =>
             {
+                entity.ToTable("OrderStatusHistory");
                 entity.HasKey(e => e.id);
                 entity.Property(e => e.status).HasMaxLength(50);
                 entity.Property(e => e.updated_at).HasDefaultValueSql("getdate()");

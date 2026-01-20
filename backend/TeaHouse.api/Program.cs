@@ -11,6 +11,10 @@ namespace TeaHouse.api
     {
         public static void Main(string[] args)
         {
+            var hash = BCrypt.Net.BCrypt.HashPassword("hoainam04");
+            Console.WriteLine(hash);
+            Console.WriteLine(hash.Length);
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services
@@ -81,9 +85,13 @@ namespace TeaHouse.api
             app.UseAuthentication();
             app.UseAuthorization();
 
+            app.UseStaticFiles();
+
+
             app.MapControllers();
 
             app.Run();
         }
     }
+
 }

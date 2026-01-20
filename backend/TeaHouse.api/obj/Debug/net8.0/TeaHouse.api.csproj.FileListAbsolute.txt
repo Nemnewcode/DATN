@@ -272,3 +272,5 @@ C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\refint\TeaHouse.api.dll
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.pdb
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.genruntimeconfig.cache
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\ref\TeaHouse.api.dll
+C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.sourcelink.json
+C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\BCrypt.Net-Next.dll
