@@ -2,9 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
-using TeaHouse.api.Models;
-using TeaHouse.Api.DTOs;
 using TeaHouse.Api.Data;
+using TeaHouse.Api.DTOs.Users;
 
 namespace TeaHouse.Api.Controllers
 {
@@ -20,23 +19,23 @@ namespace TeaHouse.Api.Controllers
             _context = context;
         }
 
-        // ===============================
-        // GET: api/user/profile
-        // ===============================
         [HttpGet("profile")]
-        public async Task<IActionResult> GetProfile()
+        public async Task<ActionResult<UserProfileDto>> GetProfile()
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
             var user = await _context.Users
                 .Where(u => u.id == userId)
-                .Select(u => new
+                .Select(u => new UserProfileDto
                 {
-                    u.id,
-                    u.name,
-                    u.email,
-                    u.role,
-                    u.created_at
+                    id = u.id,
+                    username = u.username,
+                    name = u.name,
+                    email = u.email,
+                    phone = u.phone,
+                    address = u.address,
+                    role = u.role,
+                    created_at = u.created_at
                 })
                 .FirstOrDefaultAsync();
 
@@ -46,11 +45,8 @@ namespace TeaHouse.Api.Controllers
             return Ok(user);
         }
 
-        // ===============================
-        // PUT: api/user/profile
-        // ===============================
         [HttpPut("profile")]
-        public async Task<IActionResult> UpdateProfile(UserProfileDto dto)
+        public async Task<IActionResult> UpdateProfile(UserUpdateProfileDto dto)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
@@ -59,9 +55,12 @@ namespace TeaHouse.Api.Controllers
                 return NotFound();
 
             user.name = dto.name;
+            user.phone = dto.phone;
+            user.address = dto.address;
+
             await _context.SaveChangesAsync();
 
-            return Ok("Cập nhật thông tin thành công");
+            return Ok(new { message = "Cập nhật thông tin thành công" });
         }
     }
 }

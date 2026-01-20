@@ -15,11 +15,14 @@ namespace TeaHouse.Api.Controllers
             _context = context;
         }
 
+        // ===============================
         // GET: api/products
+        // ===============================
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var products = await _context.Products
+                .Include(p => p.category) // ✅ SỬA
                 .Where(p => p.is_active == true)
                 .Select(p => new
                 {
@@ -27,9 +30,13 @@ namespace TeaHouse.Api.Controllers
                     p.name,
                     p.price,
                     image = p.ProductImages
-                        .Where(i => i.is_main  == true)
+                        .Where(i => i.is_main == true)
                         .Select(i => i.image_url)
                         .FirstOrDefault(),
+
+                    category_id = p.category_id,
+                    category_slug = p.category.slug,   // ✅ SỬA
+                    category_name = p.category.name,   // ✅ SỬA
 
                     toppings = p.ProductToppings
                         .Where(pt => pt.topping.is_active == true)
@@ -46,9 +53,9 @@ namespace TeaHouse.Api.Controllers
             return Ok(products);
         }
 
-
-
-        // GET: api/products/5
+        // ===============================
+        // GET: api/products/{id}
+        // ===============================
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -56,25 +63,28 @@ namespace TeaHouse.Api.Controllers
                 .Where(p => p.id == id)
                 .Select(p => new
                 {
-                    id = p.id,
-                    name = p.name,
-                    price = p.price,
-                    image = p.image,
-                    description = p.description,
-                    status = p.status,
+                    p.id,
+                    p.name,
+                    p.price,
+                    p.description,
+                    p.image,
+                    p.status,
 
                     category = new
                     {
-                        id = p.category.id,
-                        name = p.category.name
+                        p.category.id,     // ✅ SỬA
+                        p.category.name
                     },
 
-                    toppings = p.ProductToppings.Select(pt => new
-                    {
-                        id = pt.topping.id,
-                        name = pt.topping.name,
-                        price = pt.topping.price
-                    })
+                    toppings = p.ProductToppings
+                        .Where(pt => pt.topping.is_active == true)
+                        .Select(pt => new
+                        {
+                            pt.topping.id,
+                            pt.topping.name,
+                            pt.topping.price
+                        })
+                        .ToList()
                 })
                 .FirstOrDefaultAsync();
 
@@ -84,29 +94,19 @@ namespace TeaHouse.Api.Controllers
             return Ok(product);
         }
 
-        // POST: api/products
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] api.Models.Product model)
-        {
-            _context.Products.Add(model);
-            await _context.SaveChangesAsync();
-
-            return Ok(new
-            {
-                message = "Tạo sản phẩm thành công",
-                id = model.id
-            });
-
-        }
+        // ===============================
+        // GET: api/products/by-category/{slug}
+        // ===============================
         [HttpGet("by-category/{slug}")]
         public async Task<IActionResult> GetByCategory(string slug)
         {
             var products = await _context.Products
+                .Include(p => p.category) // ✅ SỬA
                 .Include(p => p.ProductImages)
                 .Include(p => p.ProductToppings)
                     .ThenInclude(pt => pt.topping)
                 .Where(p =>
-                    p.category.slug == slug &&
+                    p.category.slug == slug && // ✅ SỬA
                     p.is_active == true
                 )
                 .Select(p => new
@@ -133,7 +133,5 @@ namespace TeaHouse.Api.Controllers
 
             return Ok(products);
         }
-
-
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeaHouse.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd22248ba240ead8450c1ad94378f6c5e9c94443")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fdc91592341c866dfa5c28cdeac63d3598edf7c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeaHouse.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeaHouse.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

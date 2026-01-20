@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using TeaHouse.api.Models;
 using TeaHouse.api.DTOs.Users;
 using TeaHouse.Api.Data;
+using TeaHouse.Api.DTOs;
+using TeaHouse.api.DTOs;
 
 namespace TeaHouse.api.Controllers.Admin
 {
@@ -23,23 +25,24 @@ namespace TeaHouse.api.Controllers.Admin
         // GET: api/admin/users
         // ===============================
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetUsers()
         {
             var users = await _context.Users
-                .OrderByDescending(u => u.created_at)
-                .Select(u => new
+                .Select(u => new AdminUserDto
                 {
-                    u.id,
-                    u.name,
-                    u.email,
-                    u.role,
+                    id = u.id,
+                    name = u.name,
+                    email = u.email,
+                    role = u.role,
                     is_active = u.is_active ?? false,
-                    u.created_at
+                    phone = u.phone,
+                    address = u.address
                 })
                 .ToListAsync();
 
             return Ok(users);
         }
+
 
         // ===============================
         // POST: api/admin/users
@@ -70,7 +73,7 @@ namespace TeaHouse.api.Controllers.Admin
         // PUT: api/admin/users/{id}
         // ===============================
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, UserUpdateDto dto)
+        public async Task<IActionResult> Update(int id, AdminUserUpdateDto dto)
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null) return NotFound();
@@ -79,6 +82,8 @@ namespace TeaHouse.api.Controllers.Admin
             user.email = dto.email;
             user.role = dto.role;
             user.is_active = dto.is_active;
+            user.phone = dto.phone;         // ✅
+            user.address = dto.address;
 
             if (!string.IsNullOrWhiteSpace(dto.password))
             {

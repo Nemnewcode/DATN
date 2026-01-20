@@ -624,7 +624,7 @@
   },
   {
     "ContainingType": "TeaHouse.api.Controllers.Admin.AdminUsersController",
-    "Method": "GetAll",
+    "Method": "GetUsers",
     "RelativePath": "api/admin/users",
     "HttpMethod": "GET",
     "IsController": true,
@@ -663,7 +663,7 @@
       },
       {
         "Name": "dto",
-        "Type": "TeaHouse.api.DTOs.Users.UserUpdateDto",
+        "Type": "TeaHouse.api.DTOs.AdminUserUpdateDto",
         "IsRequired": true
       }
     ],
@@ -912,22 +912,6 @@
   },
   {
     "ContainingType": "TeaHouse.Api.Controllers.ProductsController",
-    "Method": "Create",
-    "RelativePath": "api/products",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "TeaHouse.api.Models.Product",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "TeaHouse.Api.Controllers.ProductsController",
     "Method": "GetById",
     "RelativePath": "api/products/{id}",
     "HttpMethod": "GET",
@@ -1069,6 +1053,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TeaHouse.Api.Controllers.TableReservationsController",
+    "Method": "GetMyReservations",
+    "RelativePath": "api/table-reservations/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TeaHouse.Api.Controllers.ToppingsController",
     "Method": "GetAll",
     "RelativePath": "api/toppings",
@@ -1102,7 +1096,17 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "TeaHouse.Api.DTOs.Users.UserProfileDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "TeaHouse.Api.Controllers.UsersController",
@@ -1114,7 +1118,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "TeaHouse.Api.DTOs.UserProfileDto",
+        "Type": "UserUpdateProfileDto",
         "IsRequired": true
       }
     ],

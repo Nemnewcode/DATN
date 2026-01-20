@@ -29,6 +29,8 @@ namespace TeaHouse.Api.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            
+
             modelBuilder.Entity<Banner>(entity =>
             {
                 entity.HasKey(e => e.id);
@@ -162,6 +164,7 @@ namespace TeaHouse.Api.Data
                 entity.HasOne(d => d.category)
                       .WithMany(p => p.Products)
                       .HasForeignKey(d => d.category_id);
+
             });
 
             modelBuilder.Entity<ProductImage>(entity =>

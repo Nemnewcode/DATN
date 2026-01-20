@@ -13,6 +13,7 @@ public partial class Product
 
     public int category_id { get; set; }
 
+
     public string? description { get; set; }
 
     public string? image { get; set; }

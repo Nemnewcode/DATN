@@ -144,6 +144,7 @@ C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\TeaHouse.api.dll
 C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\TeaHouse.api.pdb
 C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\Azure.Core.dll
 C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\Azure.Identity.dll
+C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\Humanizer.dll
 C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -258,6 +259,7 @@ C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.AssemblyInfo.
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.csproj.CoreCompileInputs.cache
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.MvcApplicationPartsAssemblyInfo.cs
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.MvcApplicationPartsAssemblyInfo.cache
+C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.sourcelink.json
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\staticwebassets.build.json
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\staticwebassets.development.json
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\staticwebassets\msbuild.TeaHouse.api.Microsoft.AspNetCore.StaticWebAssets.props
@@ -272,5 +274,3 @@ C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\refint\TeaHouse.api.dll
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.pdb
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.genruntimeconfig.cache
 C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\ref\TeaHouse.api.dll
-C:\K22CNT4\DATN\backend\TeaHouse.api\obj\Debug\net8.0\TeaHouse.api.sourcelink.json
-C:\K22CNT4\DATN\backend\TeaHouse.api\bin\Debug\net8.0\BCrypt.Net-Next.dll

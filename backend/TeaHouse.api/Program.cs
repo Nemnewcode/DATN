@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
 using TeaHouse.Api.Data;
+using Microsoft.OpenApi.Models;
+
 
 namespace TeaHouse.api
 {
@@ -11,9 +14,6 @@ namespace TeaHouse.api
     {
         public static void Main(string[] args)
         {
-            var hash = BCrypt.Net.BCrypt.HashPassword("hoainam04");
-            Console.WriteLine(hash);
-            Console.WriteLine(hash.Length);
 
             var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +25,41 @@ namespace TeaHouse.api
     });
 
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "TeaHouse.api",
+                    Version = "v1"
+                });
+
+               
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Nhập: Bearer {JWT token của bạn}"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+            });
+
 
             // DbContext
             builder.Services.AddDbContext<TeaHouseDbContext>(options =>
@@ -51,7 +85,8 @@ namespace TeaHouse.api
                     ValidIssuer = builder.Configuration["Jwt:Issuer"],
                     ValidAudience = builder.Configuration["Jwt:Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+                    ClockSkew = TimeSpan.Zero
                 };
             });
 

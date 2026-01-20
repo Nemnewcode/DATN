@@ -94,6 +94,35 @@ namespace TeaHouse.Api.Controllers
                 reservation.status
             });
         }
+        // GET: api/table-reservations/my
+        [HttpGet("my")]
+        public async Task<IActionResult> GetMyReservations()
+        {
+            if (User.Identity == null || !User.Identity.IsAuthenticated)
+                return Unauthorized();
+
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+            var data = await _context.TableReservations
+                .Where(r => r.user_id == userId)
+                .OrderByDescending(r => r.created_at)
+                .Select(r => new
+                {
+                    r.id,
+                    r.customer_name,
+                    r.phone,
+                    r.email,
+                    r.reservation_date,
+                    r.reservation_time,
+                    r.number_of_people,
+                    r.status,
+                    r.note,
+                    r.created_at
+                })
+                .ToListAsync();
+
+            return Ok(data);
+        }
 
 
     }
