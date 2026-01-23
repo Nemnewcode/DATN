@@ -81,16 +81,22 @@ namespace TeaHouse.Api.Data
             });
 
             modelBuilder.Entity<Inventory>(entity =>
-            {
-                entity.ToTable("Inventory");
-                entity.HasKey(e => e.id);
-                entity.Property(e => e.last_update).HasDefaultValueSql("getdate()");
-                entity.Property(e => e.is_active).HasDefaultValue(true);
+{
+                    entity.ToTable("Inventory");
+                    entity.HasKey(e => e.id);
 
-                entity.HasOne(d => d.product)
-                      .WithMany(p => p.Inventories)
-                      .HasForeignKey(d => d.product_id);
-            });
+                    entity.Property(e => e.last_update)
+                          .HasDefaultValueSql("getdate()");
+
+                    entity.Property(e => e.is_active)
+                          .HasDefaultValue(true);
+
+                    entity.HasOne(e => e.topping)
+                          .WithMany()
+                          .HasForeignKey(e => e.topping_id);
+                });
+
+
 
             modelBuilder.Entity<Order>(entity =>
             {

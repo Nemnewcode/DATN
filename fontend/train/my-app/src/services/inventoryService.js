@@ -1,15 +1,8 @@
-import api from "./api";
-
-export const getInventories = (type) =>
+export const getInventory = (type) =>
   api.get(`/admin/inventory?type=${type}`).then(res => res.data);
-
 
 export const updateInventory = (id, quantity) =>
   api.put(`/admin/inventory/${id}`, { quantity });
-
-
-export const toggleInventory = (id) =>
-  api.put(`/admin/inventory/${id}/toggle`);
 
 export const importInventory = (id, amount) =>
   api.post(`/admin/inventory/${id}/import`, { amount });

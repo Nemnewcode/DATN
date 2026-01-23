@@ -123,6 +123,35 @@ namespace TeaHouse.Api.Controllers
 
             return Ok(data);
         }
+        // PUT: api/table-reservations/{id}/cancel
+        [HttpPut("{id}/cancel")]
+        public async Task<IActionResult> CancelReservation(int id)
+        {
+            if (User.Identity == null || !User.Identity.IsAuthenticated)
+                return Unauthorized();
+
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+            var reservation = await _context.TableReservations
+                .FirstOrDefaultAsync(r => r.id == id && r.user_id == userId);
+
+            if (reservation == null)
+                return NotFound(new { message = "Không tìm thấy đặt bàn" });
+
+            if (reservation.status != "Pending")
+                return BadRequest(new { message = "Không thể hủy đặt bàn đã được xử lý" });
+
+            reservation.status = "Cancelled";
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                message = "Hủy đặt bàn thành công",
+                reservation.id,
+                reservation.status
+            });
+        }
+
 
 
     }

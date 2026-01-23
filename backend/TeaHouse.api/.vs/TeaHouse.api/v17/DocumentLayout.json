@@ -3,16 +3,68 @@
   "WorkspaceRootPath": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\controllers\\adminorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:controllers\\adminorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\data\\teahousedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:data\\teahousedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\controllers\\admininventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:controllers\\admininventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\dtos\\importinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:dtos\\importinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\dtos\\updateinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:dtos\\updateinventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\dtos\\adminreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:dtos\\adminreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\dtos\\reviewpublicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:dtos\\reviewpublicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\dtos\\revenuebydaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:dtos\\revenuebydaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\dtos\\createreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:dtos\\createreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\controllers\\tablereservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:controllers\\tablereservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\controllers\\adminuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:controllers\\adminuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\dtos\\revenuebydaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:dtos\\revenuebydaydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\dtos\\statisticsoverviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,20 +99,12 @@
       "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEED6786-1751-4796-B5E3-5A32C0C356AB}|TeaHouse.api.csproj|c:\\k22cnt4\\datn\\backend\\teahouse.api\\controllers\\adminstatisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,19 +127,162 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AdminOrdersController.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\AdminOrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminOrdersController.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\AdminOrdersController.cs",
+              "RelativeToolTip": "Controllers\\AdminOrdersController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAwwIcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T07:25:48.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAowA8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T07:14:04.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TeaHouseDbContext.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Data\\TeaHouseDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\TeaHouseDbContext.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Data\\TeaHouseDbContext.cs",
+              "RelativeToolTip": "Data\\TeaHouseDbContext.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAcwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T06:45:46.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminInventoryController.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\AdminInventoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminInventoryController.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\AdminInventoryController.cs",
+              "RelativeToolTip": "Controllers\\AdminInventoryController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAD4vxcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T06:43:15.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ImportInventoryDto.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\ImportInventoryDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\ImportInventoryDto.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\ImportInventoryDto.cs",
+              "RelativeToolTip": "DTOs\\ImportInventoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T06:43:01.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateInventoryDto.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\UpdateInventoryDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UpdateInventoryDto.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\UpdateInventoryDto.cs",
+              "RelativeToolTip": "DTOs\\UpdateInventoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T06:42:32.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Models\\Inventory.cs",
+              "RelativeDocumentMoniker": "Models\\Inventory.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Models\\Inventory.cs",
+              "RelativeToolTip": "Models\\Inventory.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA3wAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T06:35:52.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T02:54:46.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminReviewDto.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\AdminReviewDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\AdminReviewDto.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\AdminReviewDto.cs",
+              "RelativeToolTip": "DTOs\\AdminReviewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T02:54:21.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReviewPublicDto.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\ReviewPublicDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\ReviewPublicDto.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\ReviewPublicDto.cs",
+              "RelativeToolTip": "DTOs\\ReviewPublicDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T02:53:21.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateReviewDto.cs",
+              "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\CreateReviewDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\CreateReviewDto.cs",
+              "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\CreateReviewDto.cs",
+              "RelativeToolTip": "DTOs\\CreateReviewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T02:52:59.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "TableReservationsController.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\TableReservationsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TableReservationsController.cs",
               "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\TableReservationsController.cs",
               "RelativeToolTip": "Controllers\\TableReservationsController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAwwH0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAgwJkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-20T14:12:20.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "AdminUserUpdateDto.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\AdminUserUpdateDto.cs",
               "RelativeDocumentMoniker": "DTOs\\AdminUserUpdateDto.cs",
@@ -103,12 +290,11 @@
               "RelativeToolTip": "DTOs\\AdminUserUpdateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T14:02:35.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T14:02:35.597Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "UserUpdateProfileDto.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\UserUpdateProfileDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserUpdateProfileDto.cs",
@@ -116,12 +302,11 @@
               "RelativeToolTip": "DTOs\\UserUpdateProfileDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T13:51:03.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T13:51:03.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -129,25 +314,24 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAmwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T13:01:04.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T13:01:04.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Review.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Models\\Review.cs",
               "RelativeDocumentMoniker": "Models\\Review.cs",
               "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Models\\Review.cs",
               "RelativeToolTip": "Models\\Review.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA6wBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-20T13:09:25.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 25,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
@@ -155,24 +339,24 @@
               "RelativeToolTip": "Controllers\\ProductsController.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAowIkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T08:15:01.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T08:15:01.614Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 3,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
               "ToolTip": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Models\\Product.cs",
               "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA3wA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T08:14:21.277Z"
+              "WhenOpened": "2026-01-20T08:14:21.277Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "AdminUsersController.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\AdminUsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminUsersController.cs",
@@ -180,12 +364,11 @@
               "RelativeToolTip": "Controllers\\AdminUsersController.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAADwv00AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T03:21:20.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T03:21:20.137Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 18,
               "Title": "AdminUserDto.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\AdminUserDto.cs",
               "RelativeDocumentMoniker": "DTOs\\AdminUserDto.cs",
@@ -193,12 +376,11 @@
               "RelativeToolTip": "DTOs\\AdminUserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T03:20:42.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T03:20:42.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
@@ -206,12 +388,11 @@
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwDAAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T03:13:01.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T03:13:01.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
               "Title": "UserProfileDto.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\UserProfileDto.cs",
               "RelativeDocumentMoniker": "DTOs\\UserProfileDto.cs",
@@ -219,12 +400,11 @@
               "RelativeToolTip": "DTOs\\UserProfileDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T03:12:07.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T03:12:07.361Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 22,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -232,12 +412,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T03:03:02.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T03:03:02.302Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 24,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -245,12 +424,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAswHcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T02:42:55.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T02:42:55.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 26,
               "Title": "AdminStatisticsController.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\Controllers\\AdminStatisticsController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminStatisticsController.cs",
@@ -262,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 27,
               "Title": "OrderStatusStatisticDto.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\OrderStatusStatisticDto.cs",
               "RelativeDocumentMoniker": "DTOs\\OrderStatusStatisticDto.cs",
@@ -274,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "RevenueByDayDto.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\RevenueByDayDto.cs",
               "RelativeDocumentMoniker": "DTOs\\RevenueByDayDto.cs",
@@ -287,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "StatisticsOverviewDto.cs",
               "DocumentMoniker": "C:\\K22CNT4\\DATN\\backend\\TeaHouse.api\\DTOs\\StatisticsOverviewDto.cs",
               "RelativeDocumentMoniker": "DTOs\\StatisticsOverviewDto.cs",
@@ -295,8 +473,7 @@
               "RelativeToolTip": "DTOs\\StatisticsOverviewDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-20T01:59:20.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-20T01:59:20.162Z"
             }
           ]
         }

@@ -202,9 +202,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminInventoriesController",
-    "Method": "GetAll",
-    "RelativePath": "api/admin/inventories",
+    "ContainingType": "TeaHouse.Api.Controllers.AdminInventoryController",
+    "Method": "GetInventory",
+    "RelativePath": "api/admin/inventory",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -212,36 +212,57 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminInventoriesController",
-    "Method": "Update",
-    "RelativePath": "api/admin/inventories/{productId}",
+    "ContainingType": "TeaHouse.Api.Controllers.AdminInventoryController",
+    "Method": "UpdateQuantity",
+    "RelativePath": "api/admin/inventory/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productId",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "quantity",
-        "Type": "System.Int32",
+        "Name": "dto",
+        "Type": "TeaHouse.Api.DTOs.Inventory.UpdateInventoryDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "TeaHouse.Api.Controllers.Admin.AdminInventoriesController",
-    "Method": "Toggle",
-    "RelativePath": "api/admin/inventories/{productId}/toggle",
-    "HttpMethod": "PATCH",
+    "ContainingType": "TeaHouse.Api.Controllers.AdminInventoryController",
+    "Method": "Import",
+    "RelativePath": "api/admin/inventory/{id}/import",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productId",
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "TeaHouse.Api.DTOs.Inventory.ImportInventoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.AdminInventoryController",
+    "Method": "ToggleActive",
+    "RelativePath": "api/admin/inventory/{id}/toggle",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1016,6 +1037,22 @@
       {
         "Name": "dto",
         "Type": "TableReservationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TeaHouse.Api.Controllers.TableReservationsController",
+    "Method": "CancelReservation",
+    "RelativePath": "api/table-reservations/{id}/cancel",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

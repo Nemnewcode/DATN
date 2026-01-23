@@ -11,7 +11,7 @@ const menu = [
   { to: "/admin/discounts", label: "Giảm giá", icon: "🎟️" },
   { to: "/admin/toppings", label: "Topping", icon: "🧋" },
   { to: "/admin/featured-news", label: "Tin tức", icon: "📰" },
-  { to: "/admin/reviews", label: "Đánh giá", icon: "⭐" },
+  { to: "/admin/review", label: "Đánh giá", icon: "⭐" },
 ];
 
 const Sidebar = () => {
